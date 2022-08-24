@@ -83,8 +83,9 @@ ul li {
   margin-top: 7rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  place-items: center;
 }
-
 .header-text span {
   color: #fbddbb;
 }
@@ -191,6 +192,7 @@ ul li {
 .second-main {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 70px;
   margin: 3rem auto;
   width: 100%;
@@ -317,4 +319,85 @@ footer .container3 .socials {
 footer .container3 .socials .insta,
 .tweet {
   margin-right: 1rem;
+}
+@media (max-width: 868px) {
+  .header-image img {
+    margin-top: 5rem;
+    width: 700px;
+  }
+  .main-text p {
+    padding: 0px 50px;
+  }
+  .main-image img {
+    width: 210px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  .header-text p {
+    width: 100%;
+  }
+  .header-image img {
+    margin-top: 5rem;
+    width: 400px;
+  }
+  .main-image {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-image p {
+    padding: 10px 130px 50px;
+    color: rgba(255, 255, 255, 0.83);
+  }
+  nav{
+    display: none;
+  }
+  .second-main-form {
+    flex-direction: column;
+  }
+  .second-main-form button {
+   
+    margin-left: 0rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
+@media (max-width: 596px) {
+  .main-image p {
+    padding: 10px 70px 50px;
+  } 
+  footer .container1 {
+    flex-direction: column;
+  }
+  footer .container3 {
+    padding: 20px 90px 10px 80px;
+  }
+  .main-text p {
+    padding: 0px 0px;
+    margin-top: 2rem;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.83);
+  }
+}
+@media (max-width: 458px) {
+  .header {
+    padding: 20px;
+  } 
+  .main {
+    padding: 20px;
+  }
+  .second-main {
+    padding: 20px;
+  }
+  footer .container1 {
+    padding: 50px 10px 50px 20px;
+  }
+  footer .container3 {
+    padding: 20px 20px 10px 30px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

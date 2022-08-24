@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Home.css";
+import "../styles/pages/Home.css";
 import food from "../../src/assets/images/mixed-food.png";
 import Store from "../components/Store";
 import Pasta from "../../src/assets/images/stir-fry-pasta.png";

@@ -1,26 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.login-main {
+.signup-main {
   display: flex;
 }
-.left-flex {
-  background-image: url("../assets/images/helper.png");
+.signup-left-flex {
+  background-image: url("../../assets/images/bread-with-sauce.png");
   width: 50%;
   height: 120vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.right-flex {
+.signup-right-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   place-items: center;
   width: 50%;
-  margin-top: 15rem;
-  
+  margin-top: 5rem;
 }
-.welcome {
+.welcome-to-lilies {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -29,11 +28,11 @@
   line-height: 33px;
   color: #00302e;
 }
-.right-flex .input {
+.signup-right-flex .input {
   display: flex;
   flex-direction: column;
 }
-.right-flex input {
+.signup-right-flex input {
   width: 488px;
   height: 61px;
   background: rgba(255, 255, 255, 0.83);
@@ -49,10 +48,13 @@
 
   color: rgba(0, 48, 46, 0.53);
 }
-.email {
-  margin: 4rem 0rem 2.5rem;
+.signup-right-flex .first-name {
+  margin-top: 4rem;
 }
-.right-flex button {
+.signup-right-flex .email {
+  margin: 2.5rem 0rem 2.5rem;
+}
+.signup-right-flex button {
   align-items: center;
   padding: 15px 40px;
   gap: 10px;
@@ -72,13 +74,13 @@
 
   color: #fbddbb;
 }
-.login-container3 {
+.signup-right-flex .login-container3 {
   width: 76%;
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
-.login-container3 p {
+.signup-right-flex .signup-container3 p {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -86,8 +88,17 @@
   line-height: 33px;
   text-align: center;
   color: rgba(0, 48, 46, 0.91);
-  padding-bottom: 67px;
+  margin-top: 1.5rem;
 }
-.login-link{
-    text-decoration: none;
+.signup-link {
+  text-decoration: none;
+}
+.signup-link span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(0, 48, 46, 0.91);
 }
