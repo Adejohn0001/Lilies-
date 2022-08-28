@@ -352,9 +352,7 @@ footer .container3 .socials .insta,
     padding: 10px 130px 50px;
     color: rgba(255, 255, 255, 0.83);
   }
-  nav{
-    display: none;
-  }
+  
   .second-main-form {
     flex-direction: column;
   }

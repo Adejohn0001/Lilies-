@@ -11,7 +11,7 @@ import Instagram from '../../src/assets/images/instagram.png'
 import Twitter from '../../src/assets/images/twitter.png'
 import Youtube from '../../src/assets/images/youtube.png'
 import Lilies from '../../src/assets/images/logo.png'
-import { Link } from 'react-router-dom'
+import Navbar from "../components/Navbar";
 
 
 const Home = () => {
@@ -23,16 +23,7 @@ const Home = () => {
                 <div><h6>Lilies</h6></div>
             </div>
             <div className="links">
-                <div>
-                 <ul>
-                    <Link to="/" className="link"> <li className="home">Home</li> </Link>
-                    <Link to="/login" className="link"> <li className="login">Login</li> </Link>
-                 </ul>
-                </div>
-
-                <div> <Link to="/signup"> <button>Sign Up</button> </Link></div>
-               
-               
+              <Navbar />
             </div>
         </nav>
 

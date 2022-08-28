@@ -1,45 +1,39 @@
-import React, { useRef, useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/pages/Sign-up.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const SignUp = () => {
-  const [values, setValues] = useState({
-    firstName:"",
+  const [form, setForm] = useState({
+    name:"",
     email:"",
-    password:"",
+    password:""
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [valid, setValid] = useState(false)
-
-  const handleFirstNameInputChange = (event) =>{
-    setValues({...values, firstName: event.target.value})
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
   }
 
-  const handleEmailInputChange = (event) =>{
-    setValues({...values, email: event.target.value})
-  }
+  console.log(form);
 
-  const handlePasswordInputChange = (event) =>{
-    setValues({...values, password: event.target.value})
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    sessionStorage.setItem('data', JSON.stringify(form))
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (values.email && values.password && values.firstName){
-      setValid(true);
-    }
-    setSubmitted(true);
-  }
+    toast.success("Sign Up Successful")
 
-  const data = useRef();
-  const handleClick =() =>{
-    console.log(data.current.value, "initial value")
-    localStorage.setItem("inputValue",data.current.value)
+    setInterval(() => {
+      window.location = '/login'
+    }, 3000);
   }
 
   return (
     <main className='signup-main'>
+      <ToastContainer />
     <div className='signup-left-flex'></div>
 
 
@@ -47,17 +41,13 @@ const SignUp = () => {
       <div><h6 className='welcome-to-lilies'>Welcome to Lilies!</h6></div>
       
       <form className='inputs' onSubmit={handleSubmit}>
-        {submitted && valid ? <div className='success-message'>Success! Thanks you for registering <span><Link className='link2' to='/login'>Click here</Link></span></div> : null}
-        <div> <input type='text' onChange={handleFirstNameInputChange} value={values.firstName} ref={data} placeholder="Your First Name" className='first-name'/>
-        {submitted && !values.firstName ? <p className='error'>FirstName is required</p> : null }
+        <div> <input type='text' name='name' placeholder="Your First Name" className='first-name' onChange={handleChange} />
         </div>
-        <div className='email'> <input type='email'onChange={handleEmailInputChange} value={values.email} placeholder="Your Email address" />
-        {submitted && !values.email ? <p className='error'>Email is required</p> : null }
+        <div className='email'> <input type='email' name='email' placeholder="Your Email address"  onChange={handleChange} />
         </div>
-        <div> <input type='password' onChange={handlePasswordInputChange} value={values.password} placeholder="Your Password" className='password'/>
-        {submitted && !values.password ? <p className='error'>Password is required</p> : null }
+        <div> <input type='password' name='password' placeholder="Your Password" className='password'  onChange={handleChange} />
         </div>
-        <div> <button type='submit' onClick={handleClick} >SIGN UP</button></div>
+        <div> <button type='submit'>SIGN UP</button></div>
       </form>
 
 

@@ -1,0 +1,22 @@
+{
+  "orderitem": [
+    {
+      "name": "Cheeseburger",
+      "price": "N1000.00",
+      "qty": 3,
+      "id": 1
+    },
+    {
+      "name": "rice",
+      "price": "N1000.00",
+      "qty": 1,
+      "id": 2
+    },
+    {
+      "name": "Meat Balls",
+      "price": "N1000.00",
+      "qty": 1,
+      "id": 3
+    }
+  ]
+}
