@@ -9,7 +9,6 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { AuthProvider } from '../../lilies/src/Auth';
 import React from 'react';
 import ModalCart from './components/ModalCart';
 import Card from './components/Card';
@@ -18,7 +17,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <AuthProvider className="">
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -30,7 +28,6 @@ function App() {
           
         </Routes>
       </Router>
-    </AuthProvider>
   );
 }
 
